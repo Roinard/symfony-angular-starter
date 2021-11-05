@@ -1,0 +1,14 @@
+<div class="toolbar" role="banner">
+  <img
+    width="40"
+    alt="Angular Logo"
+    src="/assets/logo.jpg"
+  />
+  <span>Another Cyber Security Blog</span>
+  <div class="spacer"></div>
+  <a class="toolbar" href="/Admin" *ngIf="isAdmin() && Username!=undefined"><span> Admin </span></a>
+  <a class="toolbar" href="/profile" *ngIf="Username!=undefined"><span> {{Username}} </span></a>
+  <button *ngIf="Username===undefined" (click)="login()">Login</button>
+  <button *ngIf="Username===undefined" (click)="signin()">Sign in</button>
+  <a class="toolbar" href="/logout" *ngIf="Username!=undefined"><span> Logout </span></a>
+</div>
